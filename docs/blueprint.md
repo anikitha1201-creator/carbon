@@ -1,0 +1,32 @@
+# **App Name**: Carbon-Aware Fleet Scheduling System (CAFS)
+
+## Core Features:
+
+- AI-Powered Carbon-Aware Routing Optimization Tool: A core AI tool that utilizes vehicle data (type, capacity, fuel consumption), order details (weight, pickup/dropoff), real-time traffic data (TomTom API), distance, and live or simulated grid carbon intensity (Electricity Maps API) to provide optimal delivery routes and assign vehicles. This tool makes reasoning-based decisions to minimize emissions, cost, and time, prioritizing EV vehicles when beneficial, using algorithms like Google OR-Tools VRP.
+- Fleet Management System: Allows logistics managers to add new vehicles, update existing vehicle data (type, capacity, fuel consumption, location, availability), view vehicle status, and assign drivers. Data is stored and retrieved from Firestore.
+- Order Management System: Enables the creation of new delivery orders, viewing of the order queue, tracking of order status (pickup, dropoff, weight, delivery deadline), and automatic assignment of orders by the optimization engine. Data is managed in Firestore.
+- Live Grid Carbon Intensity & External API Integration: Integrates with external APIs like Electricity Maps to fetch and display real-time grid carbon intensity and renewable energy percentage, storing this critical data in Firestore. Also integrates with TomTom Traffic for traffic data and OSRM for routing.
+- Driver Management & Interface: Manages driver profiles including name, assigned vehicles, and performance statistics. Provides a dedicated interface for drivers to receive assigned routes, delivery tasks, and optimized navigation instructions.
+- Comprehensive Fleet Manager Dashboard: A centralized user interface for logistics managers, fleet operators, and sustainability teams. Features include a fleet overview (total, EV, diesel, active, charging vehicles), carbon metrics (CO₂ per delivery, total, saved, reduction percentage), cost metrics (fuel cost per delivery, total, savings), delivery performance (average time, completed orders, efficiency), and fleet impact metrics.
+- Interactive Route Visualization: Displays optimized delivery routes on an interactive map using OpenStreetMap and OSRM routing API. Routes clearly show pickup and dropoff locations, the optimized path, calculated distance, and estimated time of arrival (ETA).
+- Sustainability Analytics & Reporting: Generates comprehensive ESG dashboards, detailed sustainability reports, and fleet emission trends to help companies track and present their environmental performance and sustainability goals.
+- Carbon Scenario Simulation & Comparison Tool: Provides a user interface toggle to simulate different grid carbon intensity levels (e.g., 'solar peak' with low carbon, vs. 'coal peak' with high carbon). It visually compares key performance metrics (CO₂ per delivery, fuel cost, delivery time) between traditional and carbon-aware routing to demonstrate impact.
+- Vehicle Monitoring: The system continuously monitors vehicle fuel consumption, tracks vehicle type (diesel/EV/hybrid), assigned driver, and current location, feeding this data into the optimization engine and dashboard.
+- Autonomous Logistics Integration (Future): A future enhancement to integrate and manage autonomous delivery vehicles within the fleet.
+- ML Demand Prediction (Future): A future enhancement for using machine learning models to predict delivery demand, improving fleet allocation efficiency.
+- Real-time Vehicle Tracking (Future): A future enhancement for live, precise tracking of vehicle locations, providing immediate updates on delivery progress.
+- Blockchain Carbon Credits Integration (Future): A future system to manage and track carbon credits using blockchain technology for verifiable sustainability reporting.
+- Multi-city Support (Future): A future expansion to manage fleet operations and deliveries efficiently across multiple urban areas or cities.
+- Mobile Driver Application (Future): A future dedicated mobile application for drivers to receive assigned delivery tasks, optimized navigation, and report delivery status.
+
+## Style Guidelines:
+
+- Color Anchor: Professional, data-driven, and sustainable aesthetics for a modern logistics SaaS dashboard. The overall scheme emphasizes clarity and functionality.
+- Primary color: A reliable and professional blue (#2C7DA0) for core branding elements, interactive components, and dashboard headers, conveying stability and trustworthiness.
+- Background color: A clean, subtle light grey (#F8F9FA) for the main application canvas, ensuring high data readability and a modern, uncluttered appearance suitable for extensive dashboards.
+- Accent color: A vibrant and clear green (#28A745) designated for positive indicators, sustainability highlights, environmental metrics, and key action buttons, symbolizing eco-efficiency and positive outcomes.
+- Secondary color: A neutral dark grey (#343A40) for general text, borders, and secondary informational elements to maintain high contrast and excellent readability across the interface.
+- Typography: Utilize 'Inter' (sans-serif) for all textual elements. This choice ensures exceptional readability across complex data tables, KPI cards, and detailed reports, contributing to a professional and modern SaaS aesthetic.
+- Iconography: Employ a consistent set of modern, minimalist icons (e.g., derived from Font Awesome or Material Design icon libraries) for navigation, status indicators, alerts, and feature representations. This approach ensures intuitive understanding of logistics, energy, and environmental concepts.
+- Layout: Implement a responsive, grid-based layout (e.g., leveraging Tailwind CSS's utility-first approach) for optimal organization of dashboard widgets, dynamic data tables, and interactive map visualizations across diverse screen sizes. The design prioritizes clear information hierarchy and immediate access to actionable insights.
+- Animation: Incorporate subtle, performant animations for data updates, route drawing on maps, transitions between views, and interactive elements (e.g., hover states, loading indicators). These animations enhance the user experience by providing smooth visual feedback without causing distraction.

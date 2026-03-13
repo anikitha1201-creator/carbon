@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 17% 98%;
+    --foreground: 210 10% 23%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 10% 23%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 10% 23%;
+    --primary: 199 57% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 10% 23%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 17% 94%;
+    --muted-foreground: 210 10% 45%;
+    --accent: 134 61% 41%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 17% 90%;
+    --input: 210 17% 90%;
+    --ring: 199 57% 40%;
+    --radius: 0.75rem;
+    --chart-1: 199 57% 40%;
+    --chart-2: 134 61% 41%;
+    --chart-3: 210 10% 23%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 210 10% 23%;
+    --sidebar-primary: 199 57% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 17% 96%;
+    --sidebar-accent-foreground: 199 57% 40%;
+    --sidebar-border: 210 17% 90%;
+    --sidebar-ring: 199 57% 40%;
+  }
+
+  .dark {
+    --background: 210 10% 10%;
+    --foreground: 210 17% 98%;
+    --card: 210 10% 12%;
+    --card-foreground: 210 17% 98%;
+    --popover: 210 10% 12%;
+    --popover-foreground: 210 17% 98%;
+    --primary: 199 57% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 10% 23%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 10% 20%;
+    --muted-foreground: 210 10% 65%;
+    --accent: 134 61% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 10% 25%;
+    --input: 210 10% 25%;
+    --ring: 199 57% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  border-radius: 0.75rem;
+}
