@@ -24,6 +24,7 @@ import { calculateCarbonEmission } from "@/lib/carbon-engine"
 import { useToast } from "@/hooks/use-toast"
 import { optimizeFleetOrders } from "@/lib/fleet-optimizer"
 import { getGridStatus } from "@/lib/grid-carbon-service"
+import { RouteIntelligenceAnalyzer } from "@/components/route-intelligence-analyzer"
 
 // Import Map dynamically to avoid SSR issues
 const FleetLiveMap = dynamic(() => import("@/components/fleet-live-map"), { 
@@ -138,6 +139,8 @@ export default function HomePage() {
         </div>
 
         <div className="space-y-8">
+          <RouteIntelligenceAnalyzer />
+
           <Card className="overflow-hidden shadow-2xl border-none">
             <CardHeader className="bg-muted/30 border-b flex flex-row items-center justify-between">
                <div>
